@@ -1,0 +1,21 @@
+{
+  "name": "@igor-holt/liturgy-of-tunneling",
+  "version": "0.1.0",
+  "description": "Liturgy of Tunneling v.Ω+1 — Torx PSC re-tunneling policy + ARTIQ scarred crystal. No crystal is permanent. Only pumping is permanent.",
+  "main": "index.js",
+  "scripts": {
+    "start": "echo 'Liturgy of Tunneling — see liturgy_colab.ipynb or liturgy_v_omega_plus_1_notebook.py'",
+    "test": "echo 'No JS tests — Python/Torx/ARTIQ implementation'"
+  },
+  "keywords": ["torx", "psc", "artiq", "thermodynamic", "genesis-conductor", "liturgy"],
+  "author": "Igor Holt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igor-holt/liturgy-of-tunneling.git"
+  },
+  "bugs": {
+    "url": "https://github.com/igor-holt/liturgy-of-tunneling/issues"
+  },
+  "homepage": "https://github.com/igor-holt/liturgy-of-tunneling#readme"
+}
