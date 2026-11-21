@@ -32,3 +32,21 @@ npm publish --access public
 - Python 3.11+
 - `pip install extro-torx jax jaxlib numpy` (for full Torx path)
 - ARTIQ environment for the scarred crystal kernels
+
+
+## Research integration: reduction, memory, and interpretation (CPU-only)
+
+[Research RFC-0001](docs/RFC-0001-reduction-memory-and-analogy.md) separates conditional G2 compactification physics, open-system stochastic reduction and fluctuation-dissipation assumptions, conjectural ER=EPR / MWI interpretations, and non-causal cultural/clinical analogies.
+
+The branch includes an **exact classical Ornstein-Uhlenbeck reference model**, a **bounded digital skip-index generator**, and independent CPU regression tests:
+
+```sh
+python -m unittest discover -s tests -v
+```
+
+Modules:
+- `liturgy/reference_dynamics.py`: exact OU transitions with analytic second-moment reference under specified equilibrium assumptions.
+- `liturgy/schedule.py`: count-exact digital mask (`skip_indices(137,17,3) == (17,34,51)`).
+- `tests/test_reference_models.py`: no dependency on TORX, ARTIQ or connected instruments.
+
+**Safety:** The preexisting notebook and ARTIQ code remain unqualified for connected RF equipment. Colab and Hugging Face links are demonstrations, not evidence of G2 physics, quantum decoherence repair, many-body scarring, clinical identity models, or any intent-modulated mortality hypothesis. This research branch does not enable hardware operation.
