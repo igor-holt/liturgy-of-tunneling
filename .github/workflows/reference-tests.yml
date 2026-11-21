@@ -1,0 +1,26 @@
+name: CPU reference verification
+
+on:
+  push:
+    branches:
+      - research/g2-reduction-fdt-interpretation-rfc
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Syntax check
+        run: python -m compileall -q liturgy tests
+      - name: Unit tests (CPU only)
+        run: python -m unittest discover -s tests -v
